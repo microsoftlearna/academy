@@ -1,0 +1,9 @@
+Zone	State	City 	Nusery Owner	Email	Street Address	Phone Number	
+Zone 3	Montana 	Harlem	Gregory Peeler	gregory.peeler@sample.com	123 Harlem Street	406-555-0188	
+Zone 4	Wyoming 	Casper	Pramod Mistry		pramod.mistry@sample.com	987 Mistry Road	307-555-0055
+Zone 5	Lamar	Colorado 	Linda Schmid	linda.@sample.com	4 Elm Street	719-555-0000	
+Zone 6	Christmas Valley	Oregon 	Alisa Belova	alisa.@sample.com	765 Lake Road	541-555-0111	
+Zone 7	Washington 	Kennewick	Yeen Zhuang	yeen.zhuang@sample.com	567 Oak Lane	509-555-0163	
+Zone 8	Washington 	Edison	Donald Mayr	donald.mayr@sample.com	678 Farm Road	306-555-0001	
+Zone 9	Oregon	Gold Beach	Victor Ivanov	victor.ivanov@sample.com		541-555-0100	
+					90 Beach Street		

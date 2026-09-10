@@ -1,1367 +1,749 @@
-/*==========================================================
+<!DOCTYPE html>
+<html lang="en">
 
-MICROSOFT LEARN CENTER
-MICROSOFT WORD LEARNING PATH
+<head>
 
-==========================================================*/
+<meta charset="UTF-8">
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body{
+<title>Microsoft Word Learning Path | Microsoft Learn Center</title>
 
-font-family:'Poppins',sans-serif;
+<link rel="stylesheet" href="assets/css/word.css">
 
-background:#F4F7FA;
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
-color:#222;
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-line-height:1.7;
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-overflow-x:hidden;
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-}
+</head>
 
-img{
+<body>
 
-max-width:100%;
-
-display:block;
-
-}
-
-a{
-
-text-decoration:none;
-
-}
-
-ul{
-
-list-style:none;
-
-}
-
-.container{
-
-width:92%;
-
-max-width:1350px;
-
-margin:auto;
-
-}
-
-
-/*==========================================================
+<!-- ======================================================
 
 HEADER
 
-==========================================================*/
+======================================================= -->
 
-.header{
+<header class="header">
 
-position:fixed;
+<div class="header-container">
 
-top:0;
+<div class="left-header">
 
-left:0;
+<a href="index.html">
 
-width:100%;
+<img src="assets/images/mia_logo.webp" class="logo">
 
-height:72px;
+</a>
 
-background:#fff;
+<div>
 
-box-shadow:0 2px 15px rgba(0,0,0,.08);
+<h2>Microsoft Learn</h2>
 
-z-index:9999;
+<p>Learning Center</p>
 
-}
+</div>
 
-.header-container{
+</div>
 
-width:95%;
+<nav>
 
-max-width:1500px;
+<ul>
 
-height:100%;
+<li><a href="index.html">Home</a></li>
 
-margin:auto;
+<li><a href="#projects">Projects</a></li>
 
-display:flex;
+<li><a href="#videos">Videos</a></li>
 
-justify-content:space-between;
+<li><a href="#quiz">Quiz</a></li>
 
-align-items:center;
+</ul>
 
-}
+</nav>
 
-.left-header,
+<div class="right-header">
 
-.right-header{
+<div>
 
-display:flex;
+<h3>Adeleke University</h3>
 
-align-items:center;
+<p>Ede, Osun State</p>
 
-gap:10px;
+</div>
 
-}
+<img src="assets/images/au_logo.webp" class="logo">
 
-.logo{
+</div>
 
-height:46px;
+</div>
 
-width:auto;
+</header>
 
-}
 
-.left-header h2{
 
-font-size:21px;
-
-font-weight:700;
-
-color:#185ABD;
-
-}
-
-.left-header p{
-
-font-size:13px;
-
-color:#666;
-
-margin-top:-3px;
-
-}
-
-.right-header h3{
-
-font-size:16px;
-
-font-weight:600;
-
-}
-
-.right-header p{
-
-font-size:12px;
-
-color:#666;
-
-margin-top:-3px;
-
-}
-
-nav ul{
-
-display:flex;
-
-gap:30px;
-
-}
-
-nav a{
-
-font-size:15px;
-
-font-weight:500;
-
-color:#222;
-
-transition:.3s;
-
-position:relative;
-
-}
-
-nav a:hover{
-
-color:#185ABD;
-
-}
-
-nav a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-6px;
-
-width:0;
-
-height:2px;
-
-background:#185ABD;
-
-transition:.3s;
-
-}
-
-nav a:hover::after{
-
-width:100%;
-
-}
-
-
-/*==========================================================
+<!-- ======================================================
 
 HERO
 
-==========================================================*/
+======================================================= -->
 
-.hero{
+<section class="hero">
 
-margin-top:72px;
+<div class="overlay"></div>
 
-height:50vh;
+<div class="hero-content">
 
-background:url("../images/word.png");
+<i class="fa-solid fa-file-word hero-icon"></i>
 
-background-size:cover;
+<h1>Microsoft Word Learning Path</h1>
 
-background-position:center;
+<p>
 
-position:relative;
+Become proficient in Microsoft Word from beginner to expert through guided practical projects, video tutorials and certification preparation.
 
-display:flex;
+</p>
 
-justify-content:center;
+<a href="#projects" class="start-btn">
 
-align-items:center;
+Start Learning
 
-text-align:center;
+</a>
 
-overflow:hidden;
+</div>
 
-}
-
-.overlay{
-
-position:absolute;
-
-inset:0;
-
-background:rgba(0,0,0,.55);
-
-}
-
-.hero-content{
-
-position:relative;
-
-z-index:5;
-
-width:90%;
-
-max-width:900px;
-
-color:#fff;
-
-}
-
-.hero-icon{
-
-font-size:65px;
-
-margin-bottom:18px;
-
-color:#fff;
-
-}
-
-.hero h1{
-
-font-size:48px;
-
-font-weight:700;
-
-margin-bottom:18px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-opacity:.95;
-
-margin-bottom:35px;
-
-}
-
-.start-btn{
-
-display:inline-block;
-
-padding:15px 42px;
-
-background:#185ABD;
-
-color:#fff;
-
-font-weight:600;
-
-border-radius:8px;
-
-transition:.35s;
-
-}
-
-.start-btn:hover{
-
-background:#134A96;
-
-transform:translateY(-3px);
-
-box-shadow:0 15px 35px rgba(24,90,189,.35);
-
-}
+</section>
 
 
-/*==========================================================
+
+<!-- ======================================================
 
 LEARNING PROGRESS
 
-==========================================================*/
+======================================================= -->
 
-.progress-section{
+<section class="progress-section">
 
-padding:90px 0;
+<div class="container">
 
-}
+<div class="section-title">
 
-.section-title{
+<h2>Learning Progress</h2>
 
-text-align:center;
+<p>Microsoft Word</p>
 
-margin-bottom:50px;
+</div>
 
-}
+<div class="progress-card">
 
-.section-title h2{
+<div class="progress-info">
 
-font-size:34px;
+<span>Current Learning Path</span>
 
-font-weight:700;
+<span>0%</span>
 
-margin-bottom:10px;
+</div>
 
-color:#185ABD;
+<div class="progress">
 
-}
+<div class="progress-bar word-progress"></div>
 
-.section-title p{
+</div>
 
-color:#666;
+</div>
 
-font-size:17px;
+</div>
 
-}
+</section>
 
-.progress-card{
-
-background:#fff;
-
-padding:40px;
-
-border-radius:18px;
-
-box-shadow:0 12px 35px rgba(0,0,0,.08);
-
-max-width:900px;
-
-margin:auto;
-
-}
-
-.progress-info{
-
-display:flex;
-
-justify-content:space-between;
-
-margin-bottom:18px;
-
-font-size:18px;
-
-font-weight:600;
-
-}
-
-.progress{
-
-height:18px;
-
-background:#D8E4F5;
-
-border-radius:50px;
-
-overflow:hidden;
-
-}
-
-.word-progress{
-
-width:0%;
-
-height:100%;
-
-background:linear-gradient(90deg,#185ABD,#2F7AE5);
-
-border-radius:50px;
-
-}
-
-/*==========================================================
+<!-- ======================================================
 
 PRACTICAL PROJECTS
 
-==========================================================*/
+======================================================= -->
 
-.projects{
+<section class="projects" id="projects">
 
-padding:100px 0;
+<div class="container">
 
-background:#F8FAFD;
+<div class="section-title">
 
-}
+<h2>Practical Projects</h2>
 
-.project-grid{
+<p>
+Complete practical Microsoft Word projects using the downloadable files below.
+</p>
 
-display:grid;
+</div>
 
-grid-template-columns:repeat(auto-fit,minmax(360px,1fr));
+<div class="project-grid">
 
-gap:35px;
+<!-- ===================== PROJECT 1 ====================== -->
 
-margin-top:50px;
+<div class="project-card">
 
-}
+<div class="project-header">
 
-.project-card{
+<h3>Project 1</h3>
 
-background:#fff;
+<span>Beginner Level</span>
 
-border-radius:18px;
+</div>
 
-padding:30px;
+<h4>Business Proposal Document</h4>
 
-box-shadow:0 12px 35px rgba(0,0,0,.08);
+<p>
 
-transition:.35s;
+Learn document creation, formatting, page setup, tables,
+pictures and professional document presentation.
 
-border-top:5px solid #185ABD;
+</p>
 
-position:relative;
+<div class="download-buttons">
 
-overflow:hidden;
+<a href="assets/documents/word/project1/project_file.docx"
+download
+class="download-btn">
 
-}
+<i class="fa-solid fa-file-word"></i>
 
-.project-card::before{
+Project File
 
-content:"";
+</a>
 
-position:absolute;
+<a href="assets/documents/word/project1/project_data.docx"
+download
+class="download-btn">
 
-top:0;
+<i class="fa-solid fa-folder-open"></i>
 
-left:0;
+Project Data File
 
-width:100%;
+</a>
 
-height:5px;
+<a href="assets/documents/word/project1/sign_illustration.png"
+download
+class="download-btn">
 
-background:linear-gradient(90deg,#185ABD,#2F7AE5);
+<i class="fa-solid fa-signature"></i>
 
-}
+Sign Illustration
 
-.project-card:hover{
+</a>
 
-transform:translateY(-12px);
+<a href="assets/documents/word/project1/word.pptx"
+download
+class="download-btn">
 
-box-shadow:0 25px 50px rgba(0,0,0,.15);
+<i class="fa-solid fa-book-open"></i>
 
-}
+Step-by-Step Guide
 
-.project-header{
+</a>
 
-display:flex;
+</div>
 
-justify-content:space-between;
+</div>
 
-align-items:center;
+<!-- ===================== PROJECT 2 ====================== -->
 
-margin-bottom:20px;
+<div class="project-card">
 
-}
+<div class="project-header">
 
-.project-header h3{
+<h3>Project 2</h3>
 
-font-size:24px;
+<span>Intermediate</span>
 
-color:#185ABD;
+</div>
 
-font-weight:700;
+<h4>Academic Report</h4>
 
-}
+<p>
 
-.project-header span{
+Work with page numbering, headers, footers,
+styles, references and image positioning.
 
-background:#EAF3FF;
+</p>
 
-color:#185ABD;
+<div class="download-buttons">
 
-padding:7px 18px;
+<a href="assets/documents/word/project2/project_file.docx"
+download
+class="download-btn">
 
-border-radius:30px;
+<i class="fa-solid fa-file-word"></i>
 
-font-size:13px;
+Project File
 
-font-weight:600;
+</a>
 
-}
+<a href="assets/documents/word/project2/project_data.docx"
+download
+class="download-btn">
 
-.project-card h4{
+<i class="fa-solid fa-folder-open"></i>
 
-font-size:21px;
+Project Data File
 
-margin-bottom:15px;
+</a>
 
-color:#222;
+<a href="assets/documents/word/project2/dandelion_photo.jpg"
+download
+class="download-btn">
 
-}
+<i class="fa-solid fa-signature"></i>
 
-.project-card p{
+dandelion photo
 
-font-size:15px;
+</a>
 
-line-height:1.8;
+<a href="assets/documents/word/project2/guide.pdf"
+download
+class="download-btn">
 
-color:#666;
+<i class="fa-solid fa-book-open"></i>
 
-margin-bottom:25px;
+Step-by-Step Guide
 
-}
+</a>
 
-/*========================
+</div>
 
-DOWNLOAD BUTTONS
+</div>
 
-========================*/
+<!-- ===================== PROJECT 3 ====================== -->
 
-.download-buttons{
+<div class="project-card">
 
-display:grid;
+<div class="project-header">
 
-grid-template-columns:1fr;
+<h3>Project 3</h3>
 
-gap:15px;
+<span>Advanced</span>
 
-}
+</div>
 
-.download-btn{
+<h4>Professional Resume & Portfolio</h4>
 
-display:flex;
+<p>
 
-align-items:center;
+Apply advanced Microsoft Word skills including
+tables, SmartArt, themes, forms and document protection.
 
-gap:15px;
+</p>
 
-padding:16px 20px;
+<div class="download-buttons">
 
-background:#F5F9FF;
+<a href="assets/documents/word/project3/project_file.docx"
+download
+class="download-btn">
 
-border-radius:12px;
+<i class="fa-solid fa-file-word"></i>
 
-color:#185ABD;
+Project File
 
-font-weight:600;
+</a>
 
-transition:.3s;
+<a href="assets/documents/word/project3/project_data.docx"
+download
+class="download-btn">
 
-border:1px solid transparent;
+<i class="fa-solid fa-folder-open"></i>
 
-}
+Project Data File
 
-.download-btn i{
+</a>
 
-font-size:22px;
+<a href="assets/documents/word/project3/Bee.docx"
+download
+class="download-btn">
 
-width:28px;
+<i class="fa-solid fa-folder-open"></i>
 
-text-align:center;
+Bee
 
-}
+</a>
 
-.download-btn:hover{
+<a href="assets/documents/word/project3/logo_square.jpeg"
+download
+class="download-btn">
 
-background:#185ABD;
+<i class="fa-solid fa-signature"></i>
 
-color:#fff;
+Logo Square
 
-transform:translateX(8px);
+</a>
 
-border-color:#185ABD;
+<a href="assets/documents/word/project3/guide.pdf"
+download
+class="download-btn">
 
-box-shadow:0 10px 25px rgba(24,90,189,.25);
+<i class="fa-solid fa-book-open"></i>
 
-}
+Step-by-Step Guide
 
-.download-btn:hover i{
+</a>
 
-transform:scale(1.1);
+</div>
 
-transition:.3s;
+</div>
 
-}
+</div>
 
-/*========================
+</div>
 
-PROJECT NUMBER BADGE
+</section>
 
-========================*/
-
-.project-card::after{
-
-content:"";
-
-position:absolute;
-
-right:-35px;
-
-top:-35px;
-
-width:110px;
-
-height:110px;
-
-background:rgba(24,90,189,.05);
-
-border-radius:50%;
-
-}
-
-/*========================
-
-SECTION ANIMATION
-
-========================*/
-
-.project-card{
-
-opacity:0;
-
-transform:translateY(40px);
-
-animation:fadeUp .8s forwards;
-
-}
-
-.project-card:nth-child(1){
-
-animation-delay:.2s;
-
-}
-
-.project-card:nth-child(2){
-
-animation-delay:.4s;
-
-}
-
-.project-card:nth-child(3){
-
-animation-delay:.6s;
-
-}
-
-@keyframes fadeUp{
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-/*==========================================================
+<!-- ======================================================
 
 VIDEO TUTORIALS
 
-==========================================================*/
+======================================================= -->
 
-.video-section{
+<section class="video-section" id="videos">
 
-padding:100px 0;
+<div class="container">
 
-background:#FFFFFF;
+<div class="section-title">
 
-}
+<h2>Video Tutorials</h2>
 
-.video-layout{
+<p>
+Watch step-by-step Microsoft Word lessons and practice along.
+</p>
 
-display:grid;
+</div>
 
-grid-template-columns:340px 1fr;
+<div class="video-layout">
 
-gap:40px;
+<!-- ================= LEFT SIDE ================= -->
 
-align-items:flex-start;
+<div class="lesson-list">
 
-margin-top:50px;
+    <button class="lesson-btn active"
+        data-video="https://youtu.be/kKHFRmNqdFc">
 
-}
+        <i class="fa-solid fa-play"></i>
 
+        Introduction
 
-/*========================
+    </button>
 
-LESSON PANEL
 
-========================*/
+    <button class="lesson-btn"
+        data-video="https://youtu.be/4Pkbg2-YcG0">
 
-.lesson-list{
+        <i class="fa-solid fa-play"></i>
 
-background:#fff;
+        File
 
-border-radius:18px;
+    </button>
 
-padding:25px;
 
-box-shadow:0 12px 35px rgba(0,0,0,.08);
+    <button class="lesson-btn"
+        data-video="https://youtu.be/z2a46H7Ur1Q">
 
-position:sticky;
+        <i class="fa-solid fa-play"></i>
 
-top:95px;
+        Home
 
-}
+    </button>
 
-.lesson-btn{
 
-width:100%;
+    <button class="lesson-btn"
+        data-video="https://www.youtube.com/watch?v=INSERT_VIDEO_ID">
 
-display:flex;
+        <i class="fa-solid fa-play"></i>
 
-align-items:center;
+        Insert
 
-gap:15px;
+    </button>
 
-padding:16px 18px;
 
-margin-bottom:12px;
+    <button class="lesson-btn"
+        data-video="https://www.youtube.com/watch?v=DESIGN_VIDEO_ID">
 
-border:none;
+        <i class="fa-solid fa-play"></i>
 
-border-radius:12px;
+        Design
 
-background:#F4F8FD;
+    </button>
 
-font-size:15px;
 
-font-weight:600;
+    <div id="moreLessons" style="display:none;">
 
-cursor:pointer;
+        <button class="lesson-btn"
+            data-video="https://www.youtube.com/watch?v=LAYOUT_VIDEO_ID">
 
-transition:.35s;
+            <i class="fa-solid fa-play"></i>
 
-color:#185ABD;
+            Layout
 
-}
+        </button>
 
-.lesson-btn i{
 
-font-size:18px;
+        <button class="lesson-btn"
+            data-video="https://www.youtube.com/watch?v=REFERENCES_VIDEO_ID">
 
-width:20px;
+            <i class="fa-solid fa-play"></i>
 
-}
+            References
 
-.lesson-btn:hover{
+        </button>
 
-background:#185ABD;
 
-color:#fff;
+        <button class="lesson-btn"
+            data-video="https://www.youtube.com/watch?v=AUXILIARY_VIDEO_ID">
 
-transform:translateX(6px);
+            <i class="fa-solid fa-play"></i>
 
-}
+            Auxiliary Tabs
 
-.lesson-btn.active{
+        </button>
 
-background:#185ABD;
+    </div>
 
-color:#fff;
 
-}
+    <button id="showMoreBtn" class="more-btn">
 
-.more-btn{
+        Show More Lessons
 
-width:100%;
+    </button>
 
-margin-top:20px;
+</div>
 
-padding:15px;
 
-background:#222;
+<!-- ================= RIGHT SIDE ================= -->
 
-color:#fff;
+<div class="video-player">
 
-border:none;
+    <iframe
+        id="wordVideo"
+        src="https://www.youtube.com/embed/INTRODUCTION_VIDEO_ID"
+        title="Microsoft Word Introduction"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+    </iframe>
 
-border-radius:10px;
+</div>
 
-font-size:15px;
+</div>
 
-font-weight:600;
+</div>
 
-cursor:pointer;
+</section>
 
-transition:.3s;
 
-}
 
-.more-btn:hover{
-
-background:#185ABD;
-
-}
-
-
-/*========================
-
-VIDEO PLAYER
-
-========================*/
-
-.video-player{
-
-background:#fff;
-
-padding:25px;
-
-border-radius:18px;
-
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-
-}
-
-.video-player video{
-
-width:100%;
-
-border-radius:12px;
-
-background:#000;
-
-min-height:550px;
-
-object-fit:cover;
-
-}
-
-
-/*==========================================================
+<!-- ======================================================
 
 QUIZ & PRACTICE
 
-==========================================================*/
+======================================================= -->
 
-.quiz-section{
+<section class="quiz-section" id="quiz">
 
-padding:100px 0;
+<div class="container">
 
-background:#F8FAFD;
+<div class="section-title">
 
-}
+<h2>Quiz & Practice</h2>
 
-.quiz-grid{
+<p>
 
-display:grid;
+Assess your Microsoft Word knowledge before moving to the next learning path.
 
-grid-template-columns:repeat(2,1fr);
+</p>
 
-gap:35px;
+</div>
 
-margin-top:50px;
+<div class="quiz-grid">
 
-}
+<a
 
-.quiz-card{
+href="https://forms.cloud.microsoft/r/f09rDNxJzB"
 
-background:#fff;
+target="_blank"
 
-padding:45px 35px;
+class="quiz-card">
 
-border-radius:18px;
+<i class="fa-solid fa-award"></i>
 
-text-align:center;
+<h3>Mock Examination</h3>
 
-box-shadow:0 15px 40px rgba(0,0,0,.08);
+<p>
 
-transition:.35s;
+Attempt a full MOS-style assessment before certification.
 
-color:#222;
+</p>
 
-border-top:5px solid #185ABD;
+</a>
 
-}
+</div>
 
-.quiz-card i{
+</div>
 
-font-size:55px;
+</section>
 
-color:#185ABD;
-
-margin-bottom:25px;
-
-}
-
-.quiz-card h3{
-
-font-size:24px;
-
-margin-bottom:15px;
-
-}
-
-.quiz-card p{
-
-font-size:15px;
-
-line-height:1.8;
-
-color:#666;
-
-}
-
-.quiz-card:hover{
-
-transform:translateY(-12px);
-
-box-shadow:0 25px 55px rgba(0,0,0,.15);
-
-border-top-color:#2F7AE5;
-
-}
-
-.quiz-card:hover i{
-
-transform:scale(1.1);
-
-transition:.3s;
-
-}
-
-/*==========================================================
+<!-- ======================================================
 
 NEXT LEARNING PATH
 
-==========================================================*/
+======================================================= -->
 
-.next-course{
+<section class="next-course">
 
-padding:100px 0;
+<div class="container">
 
-background:#FFFFFF;
+<div class="next-card">
 
-}
+<div class="next-text">
 
-.next-card{
+<h2>Next Learning Path</h2>
 
-display:flex;
+<p>
 
-justify-content:space-between;
+Continue your Microsoft Office Specialist learning journey by proceeding to Microsoft Excel.
 
-align-items:center;
+</p>
 
-background:linear-gradient(135deg,#185ABD,#2F7AE5);
+</div>
 
-padding:60px;
+<a href="excel.html" class="next-btn">
 
-border-radius:22px;
+Microsoft Excel
 
-color:#fff;
+<i class="fa-solid fa-arrow-right"></i>
 
-box-shadow:0 20px 50px rgba(24,90,189,.25);
+</a>
 
-}
+</div>
 
-.next-text h2{
+</div>
 
-font-size:36px;
-
-margin-bottom:15px;
-
-font-weight:700;
-
-}
-
-.next-text p{
-
-font-size:17px;
-
-line-height:1.8;
-
-opacity:.95;
-
-max-width:700px;
-
-}
-
-.next-btn{
-
-display:inline-flex;
-
-align-items:center;
-
-gap:12px;
-
-padding:18px 36px;
-
-background:#fff;
-
-color:#185ABD;
-
-border-radius:12px;
-
-font-size:18px;
-
-font-weight:700;
-
-transition:.35s;
-
-}
-
-.next-btn:hover{
-
-transform:translateY(-5px);
-
-box-shadow:0 15px 35px rgba(0,0,0,.18);
-
-background:#F5F8FC;
-
-}
-
-.next-btn i{
-
-transition:.35s;
-
-}
-
-.next-btn:hover i{
-
-transform:translateX(6px);
-
-}
+</section>
 
 
 
-/*==========================================================
+<!-- ======================================================
 
 FOOTER
 
-==========================================================*/
+======================================================= -->
 
-.footer{
+<footer class="footer">
 
-background:#1F2937;
+<div class="container">
 
-color:#fff;
+<div class="footer-grid">
 
-padding:70px 0 25px;
+<!-- ================= LEFT ================= -->
 
-}
+<div class="footer-about">
 
-.footer-grid{
+<img src="assets/images/mia_logo.webp" class="footer-logo">
 
-display:grid;
+<h3>Microsoft Learn Center</h3>
 
-grid-template-columns:2fr 1fr 1fr;
+<p>
 
-gap:50px;
+Empowering Adeleke University students with Microsoft Learn Curriculum, AI, Cloud Computing and Digital Productivity skills.
 
-}
+</p>
 
-.footer-logo{
+</div>
 
-height:60px;
+<!-- ================= QUICK LINKS ================= -->
 
-margin-bottom:18px;
+<div class="footer-links">
 
-}
+<h3>Quick Links</h3>
 
-.footer h3{
+<ul>
 
-margin-bottom:20px;
+<li><a href="index.html">Home</a></li>
 
-font-size:22px;
+<li><a href="#projects">Projects</a></li>
 
-}
+<li><a href="#videos">Video Tutorials</a></li>
 
-.footer p{
+<li><a href="#quiz">Quiz & Practice</a></li>
 
-line-height:1.9;
+<li><a href="excel.html">Microsoft Excel</a></li>
 
-color:#D1D5DB;
+</ul>
 
-}
+</div>
 
-.footer-links ul{
+<!-- ================= CONTACT ================= -->
 
-padding:0;
+<div class="footer-contact">
 
-}
+<h3>Contact</h3>
 
-.footer-links li{
+<p>
 
-margin-bottom:12px;
+<i class="fa-solid fa-envelope"></i>
 
-}
+aumia@student.adelekeuniversity.edu.ng
 
-.footer-links a{
+</p>
 
-color:#D1D5DB;
+<p>
 
-transition:.3s;
+<i class="fa-solid fa-location-dot"></i>
 
-}
+Adeleke University, Ede
 
-.footer-links a:hover{
+</p>
 
-color:#fff;
+<p>
 
-padding-left:8px;
+<i class="fa-solid fa-globe"></i>
 
-}
+Microsoft Learn Center
 
-.footer-contact p{
+</p>
 
-margin-bottom:14px;
+</div>
 
-}
+</div>
 
-.footer-contact i{
+<hr>
 
-margin-right:10px;
+<div class="copyright">
 
-color:#60A5FA;
+<p>
 
-}
+© 2026 Microsoft Learn Center - Adeleke University.
+All Rights Reserved.
 
-.footer hr{
+</p>
 
-margin:45px 0 25px;
+</div>
 
-border:none;
+</div>
 
-height:1px;
+</footer>
 
-background:rgba(255,255,255,.15);
 
-}
 
-.copyright{
+<!-- ======================================================
 
-text-align:center;
+JAVASCRIPT
 
-font-size:14px;
+======================================================= -->
 
-color:#C7CDD8;
+<script src="assets/js/word.js"></script>
 
-}
+</body>
 
-
-
-/*==========================================================
-
-RESPONSIVE
-
-==========================================================*/
-
-@media(max-width:1100px){
-
-.video-layout{
-
-grid-template-columns:1fr;
-
-}
-
-.lesson-list{
-
-position:relative;
-
-top:0;
-
-}
-
-.next-card{
-
-flex-direction:column;
-
-text-align:center;
-
-gap:30px;
-
-}
-
-.footer-grid{
-
-grid-template-columns:1fr;
-
-text-align:center;
-
-}
-
-}
-
-
-
-@media(max-width:900px){
-
-.header{
-
-height:auto;
-
-padding:15px 0;
-
-}
-
-.header-container{
-
-flex-direction:column;
-
-gap:15px;
-
-}
-
-nav ul{
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:18px;
-
-}
-
-.hero{
-
-height:60vh;
-
-}
-
-.hero h1{
-
-font-size:36px;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-
-.project-grid{
-
-grid-template-columns:1fr;
-
-}
-
-.quiz-grid{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-
-
-@media(max-width:600px){
-
-.container{
-
-width:95%;
-
-}
-
-.hero{
-
-height:55vh;
-
-}
-
-.hero-icon{
-
-font-size:52px;
-
-}
-
-.hero h1{
-
-font-size:30px;
-
-}
-
-.hero p{
-
-font-size:15px;
-
-}
-
-.start-btn{
-
-width:100%;
-
-text-align:center;
-
-}
-
-.progress-card{
-
-padding:25px;
-
-}
-
-.video-player video{
-
-min-height:240px;
-
-}
-
-.next-card{
-
-padding:35px 25px;
-
-}
-
-.next-text h2{
-
-font-size:28px;
-
-}
-
-.next-btn{
-
-width:100%;
-
-justify-content:center;
-
-}
-
-}
+</html>

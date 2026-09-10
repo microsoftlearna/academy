@@ -477,9 +477,7 @@ buttons.forEach(button => {
 
 
 /*========================================================
-
 HEADER SHADOW
-
 ========================================================*/
 
 const header = document.querySelector(".header");
@@ -497,6 +495,86 @@ window.addEventListener("scroll",()=>{
         header.style.boxShadow="0 2px 15px rgba(0,0,0,.06)";
 
     }
+
+});
+
+
+/*========================================================
+MOBILE / HEADER MENU
+========================================================*/
+
+const menuToggle = document.querySelector("#menuToggle");
+
+const menuPanel = document.querySelector("#menuPanel");
+
+
+menuToggle.addEventListener("click", () => {
+
+    menuPanel.classList.toggle("active");
+
+
+    const isOpen =
+        menuPanel.classList.contains("active");
+
+
+    menuToggle.setAttribute(
+        "aria-expanded",
+        isOpen
+    );
+
+
+    const menuIcon =
+        menuToggle.querySelector("i");
+
+
+    if(isOpen){
+
+        menuIcon.classList.remove("fa-bars");
+
+        menuIcon.classList.add("fa-xmark");
+
+    }
+
+    else{
+
+        menuIcon.classList.remove("fa-xmark");
+
+        menuIcon.classList.add("fa-bars");
+
+    }
+
+});
+
+
+/*========================================================
+CLOSE MENU WHEN A LINK IS CLICKED
+========================================================*/
+
+const menuLinks =
+    document.querySelectorAll(".menu-panel a");
+
+
+menuLinks.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        menuPanel.classList.remove("active");
+
+        menuToggle.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+
+        const menuIcon =
+            menuToggle.querySelector("i");
+
+
+        menuIcon.classList.remove("fa-xmark");
+
+        menuIcon.classList.add("fa-bars");
+
+    });
 
 });
 
@@ -638,9 +716,3 @@ document.body.style.opacity="1";
 
 });
 
-
-/*========================================
-
-END
-
-========================================*/

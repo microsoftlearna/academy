@@ -57,178 +57,506 @@ margin:auto;
 }
 
 /* =========================================================
-
-HEADER
-
+   HEADER
 ========================================================= */
 
 .header{
 
-position:fixed;
+    position:fixed;
 
-left:0;
+    top:0;
+    left:0;
+    right:0;
 
-right:0;
+    width:100%;
+    height:68px;
 
-margin:0;
+    background:#fff;
 
-padding:0;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
 
-top:0;
-
-left:0;
-
-width:100%;
-
-height:68px;
-
-background:#fff;
-
-box-shadow:0 2px 15px rgba(0,0,0,.06);
-
-z-index:9999;
+    z-index:9999;
 
 }
+
+
+/* =========================================================
+   HEADER CONTAINER
+========================================================= */
 
 .header-container{
 
-width:95%;
+    width:95%;
+    max-width:1600px;
 
-margin:auto;
+    height:68px;
 
-height:68px;
+    margin:auto;
 
-display:flex;
+    display:flex;
 
-justify-content:space-between;
+    align-items:center;
 
-align-items:center;
+    gap:15px;
 
 }
 
-/* LEFT */
+
+/* =========================================================
+   MICROSOFT LEARN
+========================================================= */
 
 .header-left{
 
-display:flex;
+    display:flex;
 
-align-items:center;
+    align-items:center;
 
-gap:12px;
+    gap:10px;
+
+    min-width:0;
+
+    white-space:nowrap;
 
 }
+
 
 .header-left img{
 
-height:42px;
+    height:42px;
 
-width:auto;
+    width:auto;
+
+    display:block;
 
 }
+
 
 .header-left h2{
 
-font-size:20px;
+    margin:0;
 
-font-weight:700;
+    font-size:20px;
 
-color:#0078D4;
+    font-weight:700;
 
-}
+    color:#0078D4;
 
-/* NAVIGATION */
-
-nav ul{
-
-display:flex;
-
-list-style:none;
-
-gap:35px;
+    white-space:nowrap;
 
 }
 
-nav ul li a{
 
-text-decoration:none;
-
-font-size:15px;
-
-font-weight:500;
-
-color:#333;
-
-transition:.35s;
-
-position:relative;
-
-}
-
-nav ul li a:hover{
-
-color:#0078D4;
-
-}
-
-nav ul li a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-8px;
-
-width:0;
-
-height:2px;
-
-background:#0078D4;
-
-transition:.35s;
-
-}
-
-nav ul li a:hover::after{
-
-width:100%;
-
-}
-
-/* RIGHT */
+/* =========================================================
+   ADELEKE UNIVERSITY
+========================================================= */
 
 .header-right{
 
-display:flex;
+    margin-left:auto;
 
-align-items:center;
+    display:flex;
 
-gap:6px;
+    align-items:center;
 
-white-space:nowrap;
+    gap:6px;
+
+    white-space:nowrap;
 
 }
+
 
 .header-right h3{
 
-margin:0;
+    margin:0;
 
-font-size:15px;
+    font-size:15px;
 
-font-weight:600;
+    font-weight:600;
 
-color:#222;
+    color:#222;
+
+    white-space:nowrap;
 
 }
 
+
 .header-right img{
 
-height:42px;
+    height:42px;
 
-width:auto;
+    width:auto;
 
-display:block;
+    display:block;
+
+}
+
+
+/* =========================================================
+   MENU BUTTON
+========================================================= */
+
+.menu-toggle{
+
+    width:44px;
+
+    height:44px;
+
+    margin-left:8px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#0078D4;
+
+    color:#fff;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+
+    transition:.3s;
+
+}
+
+
+.menu-toggle:hover{
+
+    background:#005A9E;
+
+    transform:scale(1.05);
+
+}
+
+
+.menu-toggle:focus{
+
+    outline:2px solid #0078D4;
+
+    outline-offset:2px;
+
+}
+
+
+/* =========================================================
+   MENU PANEL
+========================================================= */
+
+.menu-panel{
+
+    position:absolute;
+
+    top:68px;
+
+    right:2.5%;
+
+    width:290px;
+
+    background:#fff;
+
+    border-radius:0 0 12px 12px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+    padding:12px;
+
+    display:none;
+
+}
+
+
+/* SHOW MENU */
+
+.menu-panel.active{
+
+    display:block;
+
+}
+
+
+/* =========================================================
+   MENU LIST
+========================================================= */
+
+.menu-panel ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+    list-style:none;
+
+    margin:0;
+
+    padding:0;
+
+}
+
+
+.menu-panel ul li{
+
+    width:100%;
+
+}
+
+
+.menu-panel ul li a{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    padding:13px 15px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#333;
+
+    transition:.3s;
+
+}
+
+
+.menu-panel ul li a i{
+
+    width:20px;
+
+    text-align:center;
+
+    color:#0078D4;
+
+}
+
+
+.menu-panel ul li a:hover{
+
+    background:#f2f8fc;
+
+    color:#0078D4;
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media(max-width:900px){
+
+    .header-left h2{
+
+        font-size:17px;
+
+    }
+
+
+    .header-right h3{
+
+        font-size:13px;
+
+    }
+
+
+    .header-left img,
+    .header-right img{
+
+        height:36px;
+
+    }
+
+
+    .menu-toggle{
+
+        width:40px;
+
+        height:40px;
+
+        font-size:18px;
+
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:600px){
+
+    .header{
+
+        height:60px;
+
+    }
+
+
+    .header-container{
+
+        width:96%;
+
+        height:60px;
+
+        gap:5px;
+
+    }
+
+
+    .header-left{
+
+        gap:5px;
+
+        flex:1;
+
+        min-width:0;
+
+    }
+
+
+    .header-left img{
+
+        height:30px;
+
+        flex-shrink:0;
+
+    }
+
+
+    .header-left h2{
+
+        font-size:12px;
+
+        overflow:hidden;
+
+        text-overflow:ellipsis;
+
+    }
+
+
+    .header-right{
+
+        margin-left:0;
+
+        gap:3px;
+
+        flex-shrink:0;
+
+    }
+
+
+    .header-right h3{
+
+        font-size:10px;
+
+    }
+
+
+    .header-right img{
+
+        height:30px;
+
+    }
+
+
+    .menu-toggle{
+
+        width:34px;
+
+        height:34px;
+
+        margin-left:3px;
+
+        border-radius:7px;
+
+        font-size:15px;
+
+    }
+
+
+    .menu-panel{
+
+        top:60px;
+
+        right:2%;
+
+        width:270px;
+
+        max-width:94vw;
+
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media(max-width:380px){
+
+    .header-container{
+
+        width:97%;
+
+        gap:3px;
+
+    }
+
+
+    .header-left h2{
+
+        font-size:10px;
+
+    }
+
+
+    .header-right h3{
+
+        font-size:8px;
+
+    }
+
+
+    .header-left img,
+    .header-right img{
+
+        height:26px;
+
+    }
+
+
+    .menu-toggle{
+
+        width:31px;
+
+        height:31px;
+
+        font-size:13px;
+
+    }
 
 }
 
@@ -1892,6 +2220,703 @@ text-align:center;
 
         font-size: 23px;
 
+    }
+
+}
+
+
+/* =========================================================
+   COMPLETE WEBSITE RESPONSIVE DESIGN
+   MICROSOFT LEARN CENTER - ADELEKE UNIVERSITY
+   ========================================================= */
+
+
+/* =========================================================
+   TABLETS & SMALL LAPTOPS
+   ========================================================= */
+
+@media (max-width: 1100px){
+
+    .container{
+        width:92%;
+    }
+
+    .header-container{
+        width:94%;
+    }
+
+    nav ul{
+        gap:20px;
+    }
+
+    .hero-content{
+        left:6%;
+        max-width:650px;
+    }
+
+    .hero-content h1{
+        font-size:55px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .feature-grid,
+    .course-grid,
+    .community-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .statistics-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+
+/* =========================================================
+   TABLETS
+   ========================================================= */
+
+@media (max-width: 900px){
+
+    .header{
+        height:auto;
+    }
+
+    .header-container{
+        min-height:68px;
+        height:auto;
+        padding:10px 0;
+        gap:10px;
+    }
+
+    .header-left{
+        gap:8px;
+    }
+
+    .header-left img{
+        height:36px;
+    }
+
+    .header-left h2{
+        font-size:17px;
+    }
+
+    .header-right h3{
+        font-size:13px;
+    }
+
+    .header-right img{
+        height:36px;
+    }
+
+    nav ul{
+        gap:15px;
+    }
+
+    nav ul li a{
+        font-size:14px;
+    }
+
+    .hero{
+        width:100%;
+        margin-left:0;
+        margin-right:0;
+    }
+
+    .hero-slider{
+        border-radius:0 0 20px 20px;
+        height:70vh;
+    }
+
+    .hero-content{
+        left:5%;
+        right:5%;
+        max-width:90%;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-content p{
+        font-size:17px;
+        line-height:1.7;
+    }
+
+    section{
+        padding:80px 0;
+    }
+
+    .section-heading{
+        margin-bottom:45px;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PHONES
+   ========================================================= */
+
+@media (max-width: 768px){
+
+    /* ---------- GLOBAL ---------- */
+
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    .container{
+        width:92%;
+        max-width:none;
+    }
+
+    section{
+        padding:65px 0;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    .header{
+        position:relative;
+        height:auto;
+    }
+
+    .header-container{
+        width:94%;
+        min-height:auto;
+        padding:12px 0;
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .header-left{
+        width:100%;
+        justify-content:center;
+        gap:8px;
+    }
+
+    .header-left img{
+        height:35px;
+    }
+
+    .header-left h2{
+        font-size:17px;
+        text-align:center;
+    }
+
+    nav{
+        width:100%;
+    }
+
+    nav ul{
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-wrap:wrap;
+        gap:10px 18px;
+    }
+
+    nav ul li a{
+        font-size:13px;
+    }
+
+    .header-right{
+        width:100%;
+        justify-content:center;
+        gap:7px;
+    }
+
+    .header-right h3{
+        font-size:13px;
+    }
+
+    .header-right img{
+        height:35px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .hero{
+        width:100%;
+        margin:0;
+    }
+
+    .hero-slider{
+        height:68vh;
+        min-height:480px;
+        border-radius:0 0 18px 18px;
+    }
+
+    .hero-content{
+        left:6%;
+        right:6%;
+        top:50%;
+        max-width:88%;
+        text-align:center;
+    }
+
+    .hero-content h5{
+        font-size:13px;
+        letter-spacing:1.5px;
+        margin-bottom:12px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+        line-height:1.15;
+        margin-bottom:16px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+
+    /* ---------- HERO BUTTONS ---------- */
+
+    .hero-buttons{
+        position:absolute;
+        left:50%;
+        bottom:-25px;
+        transform:translateX(-50%);
+        width:90%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+        width:100%;
+        max-width:280px;
+        padding:14px 22px;
+        font-size:14px;
+        text-align:center;
+    }
+
+
+    /* ---------- SECTION HEADINGS ---------- */
+
+    .section-heading{
+        margin-bottom:35px;
+        padding:0 10px;
+    }
+
+    .section-heading h2{
+        font-size:29px;
+        line-height:1.25;
+    }
+
+    .section-heading p{
+        font-size:15px;
+        line-height:1.7;
+    }
+
+
+    /* ---------- FEATURES ---------- */
+
+    .features{
+        padding-top:85px;
+    }
+
+    .feature-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .feature-card{
+        padding:30px 22px;
+    }
+
+    .feature-icon{
+        width:72px;
+        height:72px;
+        margin-bottom:20px;
+    }
+
+    .feature-icon i{
+        font-size:28px;
+    }
+
+    .feature-card h3{
+        font-size:21px;
+    }
+
+    .feature-card p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+
+    /* ---------- COURSES ---------- */
+
+    .course-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .course-card{
+        padding:30px 22px;
+    }
+
+    .course-icon{
+        font-size:48px;
+    }
+
+    .course-card h3{
+        font-size:21px;
+    }
+
+    .course-card p{
+        font-size:14px;
+        min-height:auto;
+    }
+
+    .course-card a{
+        padding:11px 25px;
+        font-size:14px;
+    }
+
+
+    /* ---------- STATISTICS ---------- */
+
+    .statistics-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+
+    .stat-card{
+        padding:35px 20px;
+    }
+
+    .stat-card h1{
+        font-size:45px;
+    }
+
+    .stat-card h4{
+        font-size:17px;
+    }
+
+
+    /* ---------- WELCOME VIDEO ---------- */
+
+    .video-container{
+        width:100%;
+        margin-top:25px;
+        border-radius:15px;
+    }
+
+    .video-container video{
+        width:100%;
+        height:auto;
+    }
+
+
+    /* ---------- TIMETABLE ---------- */
+
+    .table-container{
+        width:100%;
+        overflow-x:auto;
+        -webkit-overflow-scrolling:touch;
+        border-radius:14px;
+    }
+
+    table{
+        min-width:850px;
+    }
+
+    thead th{
+        padding:15px;
+        font-size:14px;
+    }
+
+    tbody td{
+        padding:14px;
+        font-size:13px;
+    }
+
+
+    /* ---------- CONSULTATION ---------- */
+
+    .form-grid{
+        grid-template-columns:1fr;
+        gap:0;
+    }
+
+    .form-group{
+        margin-bottom:17px;
+    }
+
+    .form-group label{
+        font-size:14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea{
+        padding:14px 15px;
+        font-size:14px;
+    }
+
+    .form-group textarea{
+        min-height:140px;
+    }
+
+    .submit-btn{
+        width:100%;
+        padding:15px 25px;
+        font-size:15px;
+    }
+
+
+    /* ---------- COMMUNITY ---------- */
+
+    .community-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .community-card{
+        padding:30px 22px;
+    }
+
+    .community-card i{
+        font-size:45px;
+    }
+
+    .community-card h3{
+        font-size:21px;
+    }
+
+    .community-card p{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .community-card a{
+        padding:11px 25px;
+        font-size:14px;
+    }
+
+
+    /* ---------- FOOTER ---------- */
+
+    .footer{
+        padding:60px 0 25px;
+        text-align:center;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:40px;
+    }
+
+    .footer-column h3{
+        font-size:20px;
+    }
+
+    .footer-column p{
+        font-size:14px;
+    }
+
+    .social-links{
+        justify-content:center;
+    }
+
+    .copyright{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        gap:10px;
+        font-size:12px;
+    }
+
+
+    /* ---------- BACK TO TOP ---------- */
+
+    #backToTop{
+        width:45px;
+        height:45px;
+        right:15px;
+        bottom:15px;
+        font-size:17px;
+    }
+
+
+    /* ---------- REGISTRATION CLOUD ---------- */
+
+    .registration-cloud{
+        width:140px;
+        height:100px;
+        right:12px;
+        bottom:15px;
+    }
+
+    .registration-cloud::before{
+        width:60px;
+        height:60px;
+        top:-20px;
+        left:20px;
+    }
+
+    .registration-cloud::after{
+        width:70px;
+        height:70px;
+        top:-27px;
+        right:15px;
+    }
+
+    .registration-cloud strong{
+        font-size:14px;
+    }
+
+    .registration-cloud span{
+        font-size:9px;
+    }
+
+    .registration-cloud i{
+        font-size:21px;
+    }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px){
+
+    .container{
+        width:90%;
+    }
+
+    .header-left h2{
+        font-size:15px;
+    }
+
+    .header-right h3{
+        font-size:11px;
+    }
+
+    .header-left img,
+    .header-right img{
+        height:30px;
+    }
+
+    nav ul{
+        gap:8px 13px;
+    }
+
+    nav ul li a{
+        font-size:12px;
+    }
+
+
+    .hero-slider{
+        height:62vh;
+        min-height:430px;
+    }
+
+    .hero-content h1{
+        font-size:31px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .hero-content h5{
+        font-size:11px;
+    }
+
+
+    .section-heading h2{
+        font-size:26px;
+    }
+
+    .section-heading p{
+        font-size:14px;
+    }
+
+
+    .feature-card,
+    .course-card,
+    .community-card{
+        padding:27px 18px;
+    }
+
+
+    .stat-card h1{
+        font-size:40px;
+    }
+
+
+    .registration-cloud{
+        width:125px;
+        height:88px;
+        right:10px;
+        bottom:12px;
+    }
+
+    .registration-cloud strong{
+        font-size:12px;
+    }
+
+    .registration-cloud span{
+        font-size:8px;
+    }
+
+    .registration-cloud i{
+        font-size:18px;
+    }
+
+}
+
+
+/* =========================================================
+   LANDSCAPE PHONES
+   ========================================================= */
+
+@media (max-width: 900px) and (orientation: landscape){
+
+    .hero-slider{
+        height:90vh;
+        min-height:400px;
+    }
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .header-container{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .header-left,
+    .header-right{
+        width:auto;
+    }
+
+    nav{
+        width:auto;
     }
 
 }
